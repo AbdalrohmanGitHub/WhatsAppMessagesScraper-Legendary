@@ -353,14 +353,12 @@
       "properties": {
         "maskPhoneNumbers": {
           "type": "boolean",
-          "default": false,
           "title": "Mask hone umbers",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "maskNames": {
           "type": "boolean",
-          "default": false,
           "title": "Mask ames",
           "description": "See README for details.",
           "editor": "checkbox"
@@ -371,7 +369,6 @@
             "mask",
             "hash"
           ],
-          "default": "mask",
           "title": "Strategy",
           "description": "See README for details.",
           "editor": "select",
@@ -470,35 +467,30 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "minIntervalMs": {
           "type": "integer",
-          "default": 45000,
           "title": "Min nterval s",
           "description": "See README for details.",
           "editor": "number"
         },
         "maxIntervalMs": {
           "type": "integer",
-          "default": 180000,
           "title": "Max nterval s",
           "description": "See README for details.",
           "editor": "number"
         },
         "scrollPixelsMin": {
           "type": "integer",
-          "default": 200,
           "title": "Scroll ixels in",
           "description": "See README for details.",
           "editor": "number"
         },
         "scrollPixelsMax": {
           "type": "integer",
-          "default": 1200,
           "title": "Scroll ixels ax",
           "description": "See README for details.",
           "editor": "number"
@@ -517,14 +509,12 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": true,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "emulateTimezone": {
           "type": "string",
-          "default": "",
           "title": "Emulate imezone",
           "description": "See README for details.",
           "editor": "textfield"
@@ -534,21 +524,18 @@
           "items": {
             "type": "string"
           },
-          "default": [],
           "title": "Languages",
           "description": "See README for details.",
           "editor": "stringList"
         },
         "platform": {
           "type": "string",
-          "default": "",
           "title": "Platform",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "userAgent": {
           "type": "string",
-          "default": "",
           "title": "User gent",
           "description": "See README for details.",
           "editor": "textfield"
@@ -558,31 +545,24 @@
           "properties": {
             "width": {
               "type": "integer",
-              "default": 0,
               "title": "Width",
               "description": "See README for details.",
               "editor": "number"
             },
             "height": {
               "type": "integer",
-              "default": 0,
               "title": "Height",
               "description": "See README for details.",
               "editor": "number"
             }
           },
           "additionalProperties": false,
-          "default": {
-            "width": 0,
-            "height": 0
-          },
           "title": "Viewport",
           "description": "See README for details.",
           "editor": "json"
         },
         "hardwareConcurrency": {
           "type": "integer",
-          "default": 0,
           "title": "Hardware oncurrency",
           "description": "See README for details.",
           "editor": "number"
@@ -601,21 +581,12 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "options": {
           "type": "object",
-          "default": {
-            "browsers": [
-              "chrome"
-            ],
-            "devices": [
-              "desktop"
-            ]
-          },
           "title": "Options",
           "description": "See README for details.",
           "editor": "json"
@@ -634,7 +605,6 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
@@ -652,7 +622,6 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
@@ -662,28 +631,24 @@
           "items": {
             "type": "string"
           },
-          "default": [],
           "title": "Brokers",
           "description": "See README for details.",
           "editor": "stringList"
         },
         "clientId": {
           "type": "string",
-          "default": "wa-scraper",
           "title": "Client d",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "topic": {
           "type": "string",
-          "default": "whatsapp-messages",
           "title": "Topic",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "ssl": {
           "type": "boolean",
-          "default": false,
           "title": "Ssl",
           "description": "See README for details.",
           "editor": "checkbox"
@@ -693,27 +658,23 @@
           "properties": {
             "mechanism": {
               "type": "string",
-              "default": "",
               "title": "Mechanism",
               "description": "See README for details.",
               "editor": "textfield"
             },
             "username": {
               "type": "string",
-              "default": "",
               "title": "Username",
               "description": "See README for details.",
               "editor": "textfield"
             },
             "password": {
               "type": "string",
-              "default": "",
               "title": "Password",
               "description": "See README for details.",
               "editor": "textfield"
             }
           },
-          "default": {},
           "title": "Sasl",
           "description": "See README for details.",
           "editor": "json"
@@ -732,56 +693,48 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "bucket": {
           "type": "string",
-          "default": "",
           "title": "Bucket",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "prefix": {
           "type": "string",
-          "default": "whatsapp/",
           "title": "Prefix",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "region": {
           "type": "string",
-          "default": "us-east-1",
           "title": "Region",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "acl": {
           "type": "string",
-          "default": "private",
           "title": "Acl",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "sse": {
           "type": "string",
-          "default": "AES256",
           "title": "Sse",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "batchFlushMessages": {
           "type": "integer",
-          "default": 500,
           "title": "Batch lush essages",
           "description": "See README for details.",
           "editor": "number"
         },
         "batchFlushMs": {
           "type": "integer",
-          "default": 30000,
           "title": "Batch lush s",
           "description": "See README for details.",
           "editor": "number"
@@ -800,7 +753,6 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
@@ -821,7 +773,6 @@
           "items": {
             "type": "string"
           },
-          "default": [],
           "title": "Deny umbers",
           "description": "See README for details.",
           "editor": "stringList"
@@ -831,7 +782,6 @@
           "items": {
             "type": "string"
           },
-          "default": [],
           "title": "Deny ds",
           "description": "See README for details.",
           "editor": "stringList"
@@ -847,35 +797,30 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "lockKey": {
           "type": "string",
-          "default": "instance_lock",
           "title": "Lock ey",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "lockTtlSecs": {
           "type": "integer",
-          "default": 60,
           "title": "Lock tl ecs",
           "description": "See README for details.",
           "editor": "number"
         },
         "renewSecs": {
           "type": "integer",
-          "default": 30,
           "title": "Renew ecs",
           "description": "See README for details.",
           "editor": "number"
         },
         "exitIfNoLock": {
           "type": "boolean",
-          "default": true,
           "title": "Exit f o ock",
           "description": "See README for details.",
           "editor": "checkbox"
@@ -893,28 +838,24 @@
       "properties": {
         "backfillPerChat": {
           "type": "integer",
-          "default": 0,
           "title": "Backfill er hat",
           "description": "See README for details.",
           "editor": "number"
         },
         "selectedOnly": {
           "type": "boolean",
-          "default": true,
           "title": "Selected nly",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "afterUnix": {
           "type": "integer",
-          "default": 0,
           "title": "After nix",
           "description": "See README for details.",
           "editor": "number"
         },
         "maxTotal": {
           "type": "integer",
-          "default": 0,
           "title": "Max otal",
           "description": "See README for details.",
           "editor": "number"
@@ -935,21 +876,18 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "perChatCount": {
           "type": "integer",
-          "default": 0,
           "title": "Per hat ount",
           "description": "See README for details.",
           "editor": "number"
         },
         "onlySelected": {
           "type": "boolean",
-          "default": true,
           "title": "Only elected",
           "description": "See README for details.",
           "editor": "checkbox"
@@ -974,7 +912,6 @@
       "properties": {
         "timezone": {
           "type": "string",
-          "default": "",
           "title": "Timezone",
           "description": "See README for details.",
           "editor": "textfield"
@@ -984,7 +921,6 @@
           "items": {
             "type": "string"
           },
-          "default": [],
           "title": "Languages",
           "description": "See README for details.",
           "editor": "stringList"
@@ -1010,21 +946,18 @@
       "properties": {
         "focusSelectedChatsUI": {
           "type": "boolean",
-          "default": false,
           "title": "Focus elected hats ",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "cycleIntervalMs": {
           "type": "integer",
-          "default": 120000,
           "title": "Cycle nterval s",
           "description": "See README for details.",
           "editor": "number"
         },
         "cycleRandomJitterMs": {
           "type": "integer",
-          "default": 30000,
           "title": "Cycle andom itter s",
           "description": "See README for details.",
           "editor": "number"
