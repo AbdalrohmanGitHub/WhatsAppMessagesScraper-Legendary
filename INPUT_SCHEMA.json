@@ -206,12 +206,13 @@
     "webhooks": {
       "type": "array",
       "items": {
-        "type": "object"
+        "type": "string",
+        "enum": []
       },
       "default": [],
       "title": "Webhooks",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "webhookMaxRetries": {
       "type": "integer",
