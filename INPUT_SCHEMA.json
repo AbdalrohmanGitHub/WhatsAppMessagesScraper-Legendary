@@ -7,33 +7,38 @@
       "type": "boolean",
       "title": "Run headless",
       "default": true,
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "sessionId": {
       "type": "string",
       "title": "Session ID",
       "default": "default",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "sessionDir": {
       "type": "string",
       "title": "Session directory",
       "default": ".wwebjs_auth",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "rateLimitPerSecond": {
       "type": "integer",
       "minimum": 1,
       "default": 10,
       "title": "Rate imit er econd",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "maxConcurrency": {
       "type": "integer",
       "minimum": 1,
       "default": 2,
       "title": "Max oncurrency",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "listenChats": {
       "type": "string",
@@ -44,94 +49,114 @@
       ],
       "default": "all",
       "title": "Listen hats",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "includeGroups": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Include roups",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "excludeGroups": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Exclude roups",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "includeContacts": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Include ontacts",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "excludeContacts": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Exclude ontacts",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "includeChatIds": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Include hat ds",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "excludeChatIds": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Exclude hat ds",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "includeMessageTypes": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Include essage ypes",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "includeTextPatterns": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Include ext atterns",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "excludeTextPatterns": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Exclude ext atterns",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "includeFromMe": {
       "type": "boolean",
       "default": true,
       "title": "Include rom e",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "mediaHandling": {
       "type": "string",
@@ -143,52 +168,61 @@
       ],
       "default": "skip",
       "title": "Media andling",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "maxMediaSizeMB": {
       "type": "number",
       "default": 25,
       "title": "Max edia ize ",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "inlineQuotedMessage": {
       "type": "boolean",
       "default": true,
       "title": "Inline uoted essage",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "webhookUrl": {
       "type": "string",
       "title": "Webhook URL",
       "default": "",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "webhookHeaders": {
       "type": "object",
       "title": "Webhook headers",
       "default": {},
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "webhooks": {
       "type": "array",
       "items": {
-        "type": "object"
+        "type": "object",
+        "editor": "json"
       },
       "default": [],
       "title": "Webhooks",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "webhookMaxRetries": {
       "type": "integer",
       "default": 3,
       "title": "Webhook ax etries",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "webhookBaseBackoffMs": {
       "type": "integer",
       "default": 1000,
       "title": "Webhook ase ackoff s",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "webhookSignature": {
       "type": "object",
@@ -197,25 +231,29 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "algorithm": {
           "type": "string",
           "default": "sha256",
           "title": "Algorithm",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "secret": {
           "type": "string",
           "default": "",
           "title": "Secret",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "headerName": {
           "type": "string",
           "default": "X-Signature",
           "title": "Header ame",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         }
       },
       "additionalProperties": false,
@@ -226,7 +264,8 @@
         "headerName": "X-Signature"
       },
       "title": "Webhook ignature",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "outputMode": {
       "type": "string",
@@ -236,7 +275,8 @@
       ],
       "default": "rich",
       "title": "Output ode",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "webhookPayloadMode": {
       "type": "string",
@@ -247,49 +287,57 @@
       ],
       "default": "match",
       "title": "Webhook ayload ode",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "includeReactions": {
       "type": "boolean",
       "default": true,
       "title": "Include eactions",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "includeRevocations": {
       "type": "boolean",
       "default": true,
       "title": "Include evocations",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "includeAcks": {
       "type": "boolean",
       "default": false,
       "title": "Include cks",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "includeGroupEvents": {
       "type": "boolean",
       "default": false,
       "title": "Include roup vents",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "includeEdits": {
       "type": "boolean",
       "default": false,
       "title": "Include dits",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "includeRevocationsMe": {
       "type": "boolean",
       "default": false,
       "title": "Include evocations e",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "includeProfilePicUrl": {
       "type": "boolean",
       "default": false,
       "title": "Include rofile ic rl",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "redact": {
       "type": "object",
@@ -298,13 +346,15 @@
           "type": "boolean",
           "default": false,
           "title": "Mask hone umbers",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "maskNames": {
           "type": "boolean",
           "default": false,
           "title": "Mask ames",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "strategy": {
           "type": "string",
@@ -314,7 +364,8 @@
           ],
           "default": "mask",
           "title": "Strategy",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         }
       },
       "additionalProperties": false,
@@ -324,49 +375,57 @@
         "strategy": "mask"
       },
       "title": "Redact",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "datasetName": {
       "type": "string",
       "default": "",
       "title": "Dataset ame",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "storeQrToKv": {
       "type": "boolean",
       "default": true,
       "title": "Store r o v",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "qrMaxRetries": {
       "type": "integer",
       "default": 24,
       "title": "Qr ax etries",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "authTimeoutMs": {
       "type": "integer",
       "default": 120000,
       "title": "Auth imeout s",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "persistDedup": {
       "type": "boolean",
       "default": false,
       "title": "Persist edup",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "dedupMaxIds": {
       "type": "integer",
       "default": 10000,
       "title": "Dedup ax ds",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "dedupFlushSecs": {
       "type": "integer",
       "default": 30,
       "title": "Dedup lush ecs",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "targetMode": {
       "type": "string",
@@ -376,16 +435,19 @@
       ],
       "default": "all",
       "title": "Target ode",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "selectedChats": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Selected hats",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "humanMode": {
       "type": "object",
@@ -394,31 +456,36 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "minIntervalMs": {
           "type": "integer",
           "default": 45000,
           "title": "Min nterval s",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "maxIntervalMs": {
           "type": "integer",
           "default": 180000,
           "title": "Max nterval s",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "scrollPixelsMin": {
           "type": "integer",
           "default": 200,
           "title": "Scroll ixels in",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "scrollPixelsMax": {
           "type": "integer",
           "default": 1200,
           "title": "Scroll ixels ax",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         }
       },
       "additionalProperties": false,
@@ -426,7 +493,8 @@
         "enabled": false
       },
       "title": "Human ode",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "stealth": {
       "type": "object",
@@ -435,34 +503,40 @@
           "type": "boolean",
           "default": true,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "emulateTimezone": {
           "type": "string",
           "default": "",
           "title": "Emulate imezone",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "languages": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield"
           },
           "default": [],
           "title": "Languages",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "json"
         },
         "platform": {
           "type": "string",
           "default": "",
           "title": "Platform",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "userAgent": {
           "type": "string",
           "default": "",
           "title": "User gent",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "viewport": {
           "type": "object",
@@ -471,13 +545,15 @@
               "type": "integer",
               "default": 0,
               "title": "Width",
-              "description": "See README for details."
+              "description": "See README for details.",
+              "editor": "number"
             },
             "height": {
               "type": "integer",
               "default": 0,
               "title": "Height",
-              "description": "See README for details."
+              "description": "See README for details.",
+              "editor": "number"
             }
           },
           "additionalProperties": false,
@@ -486,13 +562,15 @@
             "height": 0
           },
           "title": "Viewport",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "json"
         },
         "hardwareConcurrency": {
           "type": "integer",
           "default": 0,
           "title": "Hardware oncurrency",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         }
       },
       "additionalProperties": false,
@@ -500,7 +578,8 @@
         "enabled": true
       },
       "title": "Stealth",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "fingerprint": {
       "type": "object",
@@ -509,7 +588,8 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "options": {
           "type": "object",
@@ -522,7 +602,8 @@
             ]
           },
           "title": "Options",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "json"
         }
       },
       "additionalProperties": true,
@@ -530,7 +611,8 @@
         "enabled": false
       },
       "title": "Fingerprint",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "ghostCursor": {
       "type": "object",
@@ -539,14 +621,16 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         }
       },
       "default": {
         "enabled": false
       },
       "title": "Ghost ursor",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "kafka": {
       "type": "object",
@@ -555,34 +639,40 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "brokers": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield"
           },
           "default": [],
           "title": "Brokers",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "json"
         },
         "clientId": {
           "type": "string",
           "default": "wa-scraper",
           "title": "Client d",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "topic": {
           "type": "string",
           "default": "whatsapp-messages",
           "title": "Topic",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "ssl": {
           "type": "boolean",
           "default": false,
           "title": "Ssl",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "sasl": {
           "type": "object",
@@ -591,24 +681,28 @@
               "type": "string",
               "default": "",
               "title": "Mechanism",
-              "description": "See README for details."
+              "description": "See README for details.",
+              "editor": "textfield"
             },
             "username": {
               "type": "string",
               "default": "",
               "title": "Username",
-              "description": "See README for details."
+              "description": "See README for details.",
+              "editor": "textfield"
             },
             "password": {
               "type": "string",
               "default": "",
               "title": "Password",
-              "description": "See README for details."
+              "description": "See README for details.",
+              "editor": "textfield"
             }
           },
           "default": {},
           "title": "Sasl",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "json"
         }
       },
       "additionalProperties": false,
@@ -616,7 +710,8 @@
         "enabled": false
       },
       "title": "Kafka",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "s3": {
       "type": "object",
@@ -625,49 +720,57 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "bucket": {
           "type": "string",
           "default": "",
           "title": "Bucket",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "prefix": {
           "type": "string",
           "default": "whatsapp/",
           "title": "Prefix",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "region": {
           "type": "string",
           "default": "us-east-1",
           "title": "Region",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "acl": {
           "type": "string",
           "default": "private",
           "title": "Acl",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "sse": {
           "type": "string",
           "default": "AES256",
           "title": "Sse",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "batchFlushMessages": {
           "type": "integer",
           "default": 500,
           "title": "Batch lush essages",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "batchFlushMs": {
           "type": "integer",
           "default": 30000,
           "title": "Batch lush s",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         }
       },
       "additionalProperties": false,
@@ -675,7 +778,8 @@
         "enabled": false
       },
       "title": "S3",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "nlp": {
       "type": "object",
@@ -684,14 +788,16 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         }
       },
       "default": {
         "enabled": false
       },
       "title": "Nlp",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "compliance": {
       "type": "object",
@@ -699,25 +805,30 @@
         "denyNumbers": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield"
           },
           "default": [],
           "title": "Deny umbers",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "json"
         },
         "denyIds": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield"
           },
           "default": [],
           "title": "Deny ds",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "json"
         }
       },
       "default": {},
       "title": "Compliance",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "coordinator": {
       "type": "object",
@@ -726,38 +837,44 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "lockKey": {
           "type": "string",
           "default": "instance_lock",
           "title": "Lock ey",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "lockTtlSecs": {
           "type": "integer",
           "default": 60,
           "title": "Lock tl ecs",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "renewSecs": {
           "type": "integer",
           "default": 30,
           "title": "Renew ecs",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "exitIfNoLock": {
           "type": "boolean",
           "default": true,
           "title": "Exit f o ock",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         }
       },
       "default": {
         "enabled": false
       },
       "title": "Coordinator",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "history": {
       "type": "object",
@@ -766,25 +883,29 @@
           "type": "integer",
           "default": 0,
           "title": "Backfill er hat",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "selectedOnly": {
           "type": "boolean",
           "default": true,
           "title": "Selected nly",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "afterUnix": {
           "type": "integer",
           "default": 0,
           "title": "After nix",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "maxTotal": {
           "type": "integer",
           "default": 0,
           "title": "Max otal",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         }
       },
       "default": {
@@ -794,7 +915,8 @@
         "maxTotal": 0
       },
       "title": "History",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "backfill": {
       "type": "object",
@@ -803,32 +925,37 @@
           "type": "boolean",
           "default": false,
           "title": "Enabled",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "perChatCount": {
           "type": "integer",
           "default": 0,
           "title": "Per hat ount",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "onlySelected": {
           "type": "boolean",
           "default": true,
           "title": "Only elected",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         }
       },
       "default": {
         "enabled": false
       },
       "title": "Backfill",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "proxyUrl": {
       "type": "string",
       "default": "",
       "title": "Proxy rl",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "textfield"
     },
     "geo": {
       "type": "object",
@@ -837,30 +964,36 @@
           "type": "string",
           "default": "",
           "title": "Timezone",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "textfield"
         },
         "languages": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield"
           },
           "default": [],
           "title": "Languages",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "json"
         }
       },
       "default": {},
       "title": "Geo",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "extraPuppeteerArgs": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield"
       },
       "default": [],
       "title": "Extra uppeteer rgs",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "readMode": {
       "type": "object",
@@ -869,19 +1002,22 @@
           "type": "boolean",
           "default": false,
           "title": "Focus elected hats ",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "checkbox"
         },
         "cycleIntervalMs": {
           "type": "integer",
           "default": 120000,
           "title": "Cycle nterval s",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         },
         "cycleRandomJitterMs": {
           "type": "integer",
           "default": 30000,
           "title": "Cycle andom itter s",
-          "description": "See README for details."
+          "description": "See README for details.",
+          "editor": "number"
         }
       },
       "additionalProperties": false,
@@ -891,86 +1027,101 @@
         "cycleRandomJitterMs": 30000
       },
       "title": "Read ode",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "json"
     },
     "exportChatsOnce": {
       "type": "boolean",
       "default": false,
       "title": "Export hats nce",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "exportChatsAndExit": {
       "type": "boolean",
       "default": false,
       "title": "Export hats nd xit",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "restoreSessionFromKv": {
       "type": "boolean",
       "default": false,
       "title": "Restore ession rom v",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "persistSessionToKv": {
       "type": "boolean",
       "default": false,
       "title": "Persist ession o v",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "compressSessionBackup": {
       "type": "boolean",
       "default": true,
       "title": "Compress ession ackup",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "checkbox"
     },
     "maxQueuedJobs": {
       "type": "integer",
       "default": 1000,
       "title": "Max ueued obs",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "maxRssMB": {
       "type": "integer",
       "default": 0,
       "title": "Max ss ",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "maxHeapMB": {
       "type": "integer",
       "default": 0,
       "title": "Max eap ",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "maxMessages": {
       "type": "integer",
       "default": 0,
       "title": "Max essages",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "controlPollingSecs": {
       "type": "integer",
       "default": 10,
       "title": "Control olling ecs",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "statsFlushSecs": {
       "type": "integer",
       "default": 30,
       "title": "Stats lush ecs",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "watchdogStaleMs": {
       "type": "integer",
       "default": 600000,
       "title": "Watchdog tale s",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     },
     "shutdownAfterMinutes": {
       "type": "integer",
       "default": 0,
       "title": "Shutdown fter inutes",
-      "description": "See README for details."
+      "description": "See README for details.",
+      "editor": "number"
     }
   },
-  "required": []
+  "required": [],
+  "editor": "json"
 }
