@@ -346,7 +346,7 @@
       "default": false,
       "title": "Include rofile ic rl",
       "description": "See README for details.",
-      "editor": "textfield"
+      "editor": "checkbox"
     },
     "redact": {
       "type": "object",
