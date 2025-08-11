@@ -178,6 +178,14 @@
         "default": { "enabled": false, "perChatCount": 0, "onlySelected": true }
       },
       "proxyUrl": { "type": "string", "default": "" },
+      "geo": {
+        "type": "object",
+        "properties": {
+          "timezone": { "type": "string", "default": "" },
+          "languages": { "type": "array", "items": { "type": "string" }, "default": [] }
+        },
+        "default": { }
+      },
       "extraPuppeteerArgs": { "type": "array", "items": { "type": "string" }, "default": [] },
       "readMode": {
         "type": "object",

@@ -534,7 +534,6 @@ Actor.main(async () => {
         '--disable-blink-features=AutomationControlled',
         '--lang=en-US,en;q=0.9',
         '--password-store=basic',
-        `--user-agent=${process.env.CHROME_UA || 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'}`,
         ...(input.proxyUrl ? [`--proxy-server=${input.proxyUrl}`] : []),
         ...(Array.isArray(input.extraPuppeteerArgs) ? input.extraPuppeteerArgs : []),
       ],
