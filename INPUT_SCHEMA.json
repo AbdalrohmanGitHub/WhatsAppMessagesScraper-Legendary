@@ -62,24 +62,26 @@
       "items": {
         "type": "string",
         "title": "Include Groups Item",
-        "description": "Configure Include Groups Item"
+        "description": "Configure Include Groups Item",
+        "enum": []
       },
       "default": [],
-      "title": "Include roups",
+      "title": "Include Groups",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "excludeGroups": {
       "type": "array",
       "items": {
         "type": "string",
         "title": "Exclude Groups Item",
-        "description": "Configure Exclude Groups Item"
+        "description": "Configure Exclude Groups Item",
+        "enum": []
       },
       "default": [],
-      "title": "Exclude roups",
+      "title": "Exclude Groups",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "includeContacts": {
       "type": "array",
