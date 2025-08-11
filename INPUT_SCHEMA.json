@@ -61,8 +61,6 @@
       "type": "array",
       "items": {
         "type": "string",
-        "title": "Include Groups Item",
-        "description": "Configure Include Groups Item",
         "enum": []
       },
       "default": [],
@@ -74,8 +72,6 @@
       "type": "array",
       "items": {
         "type": "string",
-        "title": "Exclude Groups Item",
-        "description": "Configure Exclude Groups Item",
         "enum": []
       },
       "default": [],
@@ -86,9 +82,7 @@
     "includeContacts": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Include Contacts Item",
-        "description": "Configure Include Contacts Item"
+        "type": "string"
       },
       "default": [],
       "title": "Include ontacts",
@@ -98,9 +92,7 @@
     "excludeContacts": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Exclude Contacts Item",
-        "description": "Configure Exclude Contacts Item"
+        "type": "string"
       },
       "default": [],
       "title": "Exclude ontacts",
@@ -110,9 +102,7 @@
     "includeChatIds": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Include Chat Ids Item",
-        "description": "Configure Include Chat Ids Item"
+        "type": "string"
       },
       "default": [],
       "title": "Include hat ds",
@@ -122,9 +112,7 @@
     "excludeChatIds": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Exclude Chat Ids Item",
-        "description": "Configure Exclude Chat Ids Item"
+        "type": "string"
       },
       "default": [],
       "title": "Exclude hat ds",
@@ -134,9 +122,7 @@
     "includeMessageTypes": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Include Message Types Item",
-        "description": "Configure Include Message Types Item"
+        "type": "string"
       },
       "default": [],
       "title": "Include essage ypes",
@@ -146,9 +132,7 @@
     "includeTextPatterns": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Include Text Patterns Item",
-        "description": "Configure Include Text Patterns Item"
+        "type": "string"
       },
       "default": [],
       "title": "Include ext atterns",
@@ -158,9 +142,7 @@
     "excludeTextPatterns": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Exclude Text Patterns Item",
-        "description": "Configure Exclude Text Patterns Item"
+        "type": "string"
       },
       "default": [],
       "title": "Exclude ext atterns",
@@ -224,9 +206,7 @@
     "webhooks": {
       "type": "array",
       "items": {
-        "type": "object",
-        "title": "Webhooks Item",
-        "description": "Configure Webhooks Item"
+        "type": "object"
       },
       "default": [],
       "title": "Webhooks",
@@ -481,9 +461,7 @@
     "selectedChats": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Selected Chats Item",
-        "description": "Configure Selected Chats Item"
+        "type": "string"
       },
       "default": [],
       "title": "Selected hats",
@@ -557,9 +535,7 @@
         "languages": {
           "type": "array",
           "items": {
-            "type": "string",
-            "title": "Languages Item",
-            "description": "Configure Languages Item"
+            "type": "string"
           },
           "default": [],
           "title": "Languages",
@@ -687,9 +663,7 @@
         "brokers": {
           "type": "array",
           "items": {
-            "type": "string",
-            "title": "Brokers Item",
-            "description": "Configure Brokers Item"
+            "type": "string"
           },
           "default": [],
           "title": "Brokers",
@@ -848,9 +822,7 @@
         "denyNumbers": {
           "type": "array",
           "items": {
-            "type": "string",
-            "title": "Deny Numbers Item",
-            "description": "Configure Deny Numbers Item"
+            "type": "string"
           },
           "default": [],
           "title": "Deny umbers",
@@ -860,9 +832,7 @@
         "denyIds": {
           "type": "array",
           "items": {
-            "type": "string",
-            "title": "Deny Ids Item",
-            "description": "Configure Deny Ids Item"
+            "type": "string"
           },
           "default": [],
           "title": "Deny ds",
@@ -1015,9 +985,7 @@
         "languages": {
           "type": "array",
           "items": {
-            "type": "string",
-            "title": "Languages Item",
-            "description": "Configure Languages Item"
+            "type": "string"
           },
           "default": [],
           "title": "Languages",
@@ -1033,9 +1001,7 @@
     "extraPuppeteerArgs": {
       "type": "array",
       "items": {
-        "type": "string",
-        "title": "Extra Puppeteer Args Item",
-        "description": "Configure Extra Puppeteer Args Item"
+        "type": "string"
       },
       "default": [],
       "title": "Extra uppeteer rgs",
