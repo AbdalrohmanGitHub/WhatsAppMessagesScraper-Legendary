@@ -539,13 +539,10 @@ Actor.main(async () => {
         ...(Array.isArray(input.extraPuppeteerArgs) ? input.extraPuppeteerArgs : []),
       ],
     },
-    webVersionCache: {
-      type: 'none',
-    },
-    authTimeoutMs: 120000,
-    qrMaxRetries: 24,
+    webVersionCache: { type: 'none' },
+    authTimeoutMs: 180000,
+    qrMaxRetries: 30,
     authStrategy: new LocalAuth({ dataPath: sessionDir, clientId: input.sessionId || DEFAULTS.sessionId }),
-    qrMaxRetries: 12,
     takeoverOnConflict: true,
     takeoverTimeoutMs: 60000,
     restartOnAuthFail: true,
@@ -649,6 +646,14 @@ Actor.main(async () => {
                 ? Promise.resolve({ state: Notification.permission })
                 : originalQuery(parameters);
             });
+            if (Array.isArray(input.stealth?.languages) && input.stealth.languages.length > 0) {
+              try { await page.evaluateOnNewDocument((langs) => {
+                Object.defineProperty(navigator, 'languages', { get: () => langs });
+              }, input.stealth.languages); } catch {}
+            }
+            if (input.stealth?.emulateTimezone) {
+              try { await page.emulateTimezone(input.stealth.emulateTimezone); } catch {}
+            }
             preAuthStealthApplied = true;
             logger.info('Applied pre-auth stealth');
           }
