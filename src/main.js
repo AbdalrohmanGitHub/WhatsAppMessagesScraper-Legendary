@@ -621,6 +621,7 @@ Actor.main(async () => {
     }, Math.max(5_000, Number(input.coordinator.renewSecs) * 1000 || 30_000)).unref();
   }
 
+  let preAuthStealthApplied = false;
   client.on('qr', async (qr) => {
     logger.info('QR code received. Scan with your WhatsApp mobile app.');
     try {
@@ -628,6 +629,33 @@ Actor.main(async () => {
       qrcodeTerminal.generate(qr, { small: true });
       // Also store plain text QR for apps that parse it directly
       await Actor.setValue('qr.txt', qr, { contentType: 'text/plain; charset=utf-8' }).catch(() => {});
+      // Apply stealth before authentication if possible
+      if (!preAuthStealthApplied) {
+        try {
+          const page = client.pupPage || (client.pupBrowser && (await client.pupBrowser.pages())[0]);
+          if (page && input.stealth?.enabled) {
+            if (input.stealth.userAgent) { try { await page.setUserAgent(input.stealth.userAgent); } catch {} }
+            if (input.stealth.viewport && Number(input.stealth.viewport.width) > 0 && Number(input.stealth.viewport.height) > 0) {
+              try { await page.setViewport({ width: Number(input.stealth.viewport.width), height: Number(input.stealth.viewport.height) }); } catch {}
+            }
+            await page.evaluateOnNewDocument(() => {
+              Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+              // eslint-disable-next-line no-undef
+              window.chrome = { runtime: {}, loadTimes: () => {}, csi: () => {} };
+              // eslint-disable-next-line no-undef
+              const originalQuery = window.navigator.permissions.query;
+              // eslint-disable-next-line no-undef
+              window.navigator.permissions.query = (parameters) => parameters.name === 'notifications'
+                ? Promise.resolve({ state: Notification.permission })
+                : originalQuery(parameters);
+            });
+            preAuthStealthApplied = true;
+            logger.info('Applied pre-auth stealth');
+          }
+        } catch (err) {
+          logger.warn({ err }, 'Pre-auth stealth injection failed');
+        }
+      }
       // Data URL for visual references in rich logs (if needed)
       const dataUrl = await QRCode.toDataURL(qr);
       logger.debug({ qrDataUrl: dataUrl.slice(0, 64) + '...' }, 'QR DataURL preview');
