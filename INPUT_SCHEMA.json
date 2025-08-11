@@ -50,12 +50,20 @@
       "default": "all",
       "title": "Listen hats",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "select",
+      "enumTitles": [
+        "All",
+        "Groups",
+        "Private"
+      ]
     },
     "includeGroups": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Include Groups Item",
+        "description": "Configure Include Groups Item"
       },
       "default": [],
       "title": "Include roups",
@@ -65,7 +73,10 @@
     "excludeGroups": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Exclude Groups Item",
+        "description": "Configure Exclude Groups Item"
       },
       "default": [],
       "title": "Exclude roups",
@@ -75,7 +86,10 @@
     "includeContacts": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Include Contacts Item",
+        "description": "Configure Include Contacts Item"
       },
       "default": [],
       "title": "Include ontacts",
@@ -85,7 +99,10 @@
     "excludeContacts": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Exclude Contacts Item",
+        "description": "Configure Exclude Contacts Item"
       },
       "default": [],
       "title": "Exclude ontacts",
@@ -95,7 +112,10 @@
     "includeChatIds": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Include Chat Ids Item",
+        "description": "Configure Include Chat Ids Item"
       },
       "default": [],
       "title": "Include hat ds",
@@ -105,7 +125,10 @@
     "excludeChatIds": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Exclude Chat Ids Item",
+        "description": "Configure Exclude Chat Ids Item"
       },
       "default": [],
       "title": "Exclude hat ds",
@@ -115,7 +138,10 @@
     "includeMessageTypes": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Include Message Types Item",
+        "description": "Configure Include Message Types Item"
       },
       "default": [],
       "title": "Include essage ypes",
@@ -125,7 +151,10 @@
     "includeTextPatterns": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Include Text Patterns Item",
+        "description": "Configure Include Text Patterns Item"
       },
       "default": [],
       "title": "Include ext atterns",
@@ -135,7 +164,10 @@
     "excludeTextPatterns": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Exclude Text Patterns Item",
+        "description": "Configure Exclude Text Patterns Item"
       },
       "default": [],
       "title": "Exclude ext atterns",
@@ -160,7 +192,13 @@
       "default": "skip",
       "title": "Media andling",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "select",
+      "enumTitles": [
+        "Skip",
+        "Base64",
+        "Kv-store",
+        "S3"
+      ]
     },
     "maxMediaSizeMB": {
       "type": "number",
@@ -193,7 +231,10 @@
     "webhooks": {
       "type": "array",
       "items": {
-        "type": "object"
+        "type": "object",
+        "editor": "json",
+        "title": "Webhooks Item",
+        "description": "Configure Webhooks Item"
       },
       "default": [],
       "title": "Webhooks",
@@ -266,7 +307,11 @@
       "default": "rich",
       "title": "Output ode",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "select",
+      "enumTitles": [
+        "Rich",
+        "Extremescrapes"
+      ]
     },
     "webhookPayloadMode": {
       "type": "string",
@@ -278,7 +323,12 @@
       "default": "match",
       "title": "Webhook ayload ode",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "select",
+      "enumTitles": [
+        "Match",
+        "Rich",
+        "Extremescrapes"
+      ]
     },
     "includeReactions": {
       "type": "boolean",
@@ -327,7 +377,7 @@
       "default": false,
       "title": "Include rofile ic rl",
       "description": "See README for details.",
-      "editor": "checkbox"
+      "editor": "textfield"
     },
     "redact": {
       "type": "object",
@@ -355,7 +405,11 @@
           "default": "mask",
           "title": "Strategy",
           "description": "See README for details.",
-          "editor": "select"
+          "editor": "select",
+          "enumTitles": [
+            "Mask",
+            "Hash"
+          ]
         }
       },
       "additionalProperties": false,
@@ -426,12 +480,19 @@
       "default": "all",
       "title": "Target ode",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "select",
+      "enumTitles": [
+        "All",
+        "Selected"
+      ]
     },
     "selectedChats": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Selected Chats Item",
+        "description": "Configure Selected Chats Item"
       },
       "default": [],
       "title": "Selected hats",
@@ -505,7 +566,10 @@
         "languages": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield",
+            "title": "Languages Item",
+            "description": "Configure Languages Item"
           },
           "default": [],
           "title": "Languages",
@@ -633,7 +697,10 @@
         "brokers": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield",
+            "title": "Brokers Item",
+            "description": "Configure Brokers Item"
           },
           "default": [],
           "title": "Brokers",
@@ -792,7 +859,10 @@
         "denyNumbers": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield",
+            "title": "Deny Numbers Item",
+            "description": "Configure Deny Numbers Item"
           },
           "default": [],
           "title": "Deny umbers",
@@ -802,7 +872,10 @@
         "denyIds": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield",
+            "title": "Deny Ids Item",
+            "description": "Configure Deny Ids Item"
           },
           "default": [],
           "title": "Deny ds",
@@ -955,7 +1028,10 @@
         "languages": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "editor": "textfield",
+            "title": "Languages Item",
+            "description": "Configure Languages Item"
           },
           "default": [],
           "title": "Languages",
@@ -971,7 +1047,10 @@
     "extraPuppeteerArgs": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "editor": "textfield",
+        "title": "Extra Puppeteer Args Item",
+        "description": "Configure Extra Puppeteer Args Item"
       },
       "default": [],
       "title": "Extra uppeteer rgs",
@@ -1105,5 +1184,6 @@
       "editor": "number"
     }
   },
-  "required": []
+  "required": [],
+  "description": "Configure WhatsApp Messages Scraper Clone Input"
 }
