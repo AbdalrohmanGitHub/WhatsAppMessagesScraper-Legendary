@@ -491,7 +491,24 @@ Actor.main(async () => {
   }, 'Starting WhatsApp scraper');
 
   const puppeteerLib = (() => { try { return require('puppeteer'); } catch { return null; } })();
-  const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || process.env.CHROME_EXECUTABLE_PATH || process.env.CHROME_PATH || (puppeteerLib && puppeteerLib.executablePath && puppeteerLib.executablePath());
+  const resolveSystemChrome = () => {
+    const candidates = [
+      process.env.PUPPETEER_EXECUTABLE_PATH,
+      process.env.CHROME_EXECUTABLE_PATH,
+      process.env.CHROME_PATH,
+      '/usr/bin/google-chrome-stable',
+      '/usr/bin/google-chrome',
+      '/usr/bin/chromium',
+      '/usr/bin/chromium-browser',
+    ].filter(Boolean);
+    for (const p of candidates) {
+      try { if (fs.existsSync(p)) return p; } catch {}
+    }
+    // fall back to Puppeteer's downloaded Chrome if present
+    try { if (puppeteerLib?.executablePath) return puppeteerLib.executablePath(); } catch {}
+    return undefined;
+  };
+  const executablePath = resolveSystemChrome();
   const client = new Client({
     puppeteer: {
       headless: Boolean(input.headless),
