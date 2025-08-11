@@ -61,118 +61,109 @@
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Include Groups Item",
         "description": "Configure Include Groups Item"
       },
       "default": [],
       "title": "Include roups",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "excludeGroups": {
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Exclude Groups Item",
         "description": "Configure Exclude Groups Item"
       },
       "default": [],
       "title": "Exclude roups",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "includeContacts": {
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Include Contacts Item",
         "description": "Configure Include Contacts Item"
       },
       "default": [],
       "title": "Include ontacts",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "excludeContacts": {
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Exclude Contacts Item",
         "description": "Configure Exclude Contacts Item"
       },
       "default": [],
       "title": "Exclude ontacts",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "includeChatIds": {
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Include Chat Ids Item",
         "description": "Configure Include Chat Ids Item"
       },
       "default": [],
       "title": "Include hat ds",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "excludeChatIds": {
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Exclude Chat Ids Item",
         "description": "Configure Exclude Chat Ids Item"
       },
       "default": [],
       "title": "Exclude hat ds",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "includeMessageTypes": {
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Include Message Types Item",
         "description": "Configure Include Message Types Item"
       },
       "default": [],
       "title": "Include essage ypes",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "includeTextPatterns": {
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Include Text Patterns Item",
         "description": "Configure Include Text Patterns Item"
       },
       "default": [],
       "title": "Include ext atterns",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "excludeTextPatterns": {
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Exclude Text Patterns Item",
         "description": "Configure Exclude Text Patterns Item"
       },
       "default": [],
       "title": "Exclude ext atterns",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "includeFromMe": {
       "type": "boolean",
@@ -232,14 +223,13 @@
       "type": "array",
       "items": {
         "type": "object",
-        "editor": "json",
         "title": "Webhooks Item",
         "description": "Configure Webhooks Item"
       },
       "default": [],
       "title": "Webhooks",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "select"
     },
     "webhookMaxRetries": {
       "type": "integer",
@@ -490,14 +480,13 @@
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Selected Chats Item",
         "description": "Configure Selected Chats Item"
       },
       "default": [],
       "title": "Selected hats",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "humanMode": {
       "type": "object",
@@ -567,14 +556,13 @@
           "type": "array",
           "items": {
             "type": "string",
-            "editor": "textfield",
             "title": "Languages Item",
             "description": "Configure Languages Item"
           },
           "default": [],
           "title": "Languages",
           "description": "See README for details.",
-          "editor": "stringList"
+          "editor": "select"
         },
         "platform": {
           "type": "string",
@@ -698,14 +686,13 @@
           "type": "array",
           "items": {
             "type": "string",
-            "editor": "textfield",
             "title": "Brokers Item",
             "description": "Configure Brokers Item"
           },
           "default": [],
           "title": "Brokers",
           "description": "See README for details.",
-          "editor": "stringList"
+          "editor": "select"
         },
         "clientId": {
           "type": "string",
@@ -860,27 +847,25 @@
           "type": "array",
           "items": {
             "type": "string",
-            "editor": "textfield",
             "title": "Deny Numbers Item",
             "description": "Configure Deny Numbers Item"
           },
           "default": [],
           "title": "Deny umbers",
           "description": "See README for details.",
-          "editor": "stringList"
+          "editor": "select"
         },
         "denyIds": {
           "type": "array",
           "items": {
             "type": "string",
-            "editor": "textfield",
             "title": "Deny Ids Item",
             "description": "Configure Deny Ids Item"
           },
           "default": [],
           "title": "Deny ds",
           "description": "See README for details.",
-          "editor": "stringList"
+          "editor": "select"
         }
       },
       "default": {},
@@ -1029,14 +1014,13 @@
           "type": "array",
           "items": {
             "type": "string",
-            "editor": "textfield",
             "title": "Languages Item",
             "description": "Configure Languages Item"
           },
           "default": [],
           "title": "Languages",
           "description": "See README for details.",
-          "editor": "stringList"
+          "editor": "select"
         }
       },
       "default": {},
@@ -1048,14 +1032,13 @@
       "type": "array",
       "items": {
         "type": "string",
-        "editor": "textfield",
         "title": "Extra Puppeteer Args Item",
         "description": "Configure Extra Puppeteer Args Item"
       },
       "default": [],
       "title": "Extra uppeteer rgs",
       "description": "See README for details.",
-      "editor": "stringList"
+      "editor": "select"
     },
     "readMode": {
       "type": "object",
