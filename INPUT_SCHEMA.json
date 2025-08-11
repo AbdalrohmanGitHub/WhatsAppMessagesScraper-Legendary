@@ -60,24 +60,22 @@
     "includeGroups": {
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": []
+        "type": "string"
       },
       "default": [],
       "title": "Include Groups",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "excludeGroups": {
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": []
+        "type": "string"
       },
       "default": [],
       "title": "Exclude Groups",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "includeContacts": {
       "type": "array",
@@ -205,13 +203,12 @@
     "webhooks": {
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": []
+        "type": "string"
       },
       "default": [],
       "title": "Webhooks",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "webhookMaxRetries": {
       "type": "integer",
