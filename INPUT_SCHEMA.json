@@ -176,7 +176,7 @@
       ]
     },
     "maxMediaSizeMB": {
-      "type": "number",
+      "type": "integer",
       "default": 25,
       "title": "Max edia ize ",
       "description": "See README for details.",
