@@ -15,6 +15,7 @@ coverage/
 # Apify / runtime storage
 apify_storage/
 storage/
+.apify/
 
 # WhatsApp sessions / temp artifacts
 .wwebjs_auth/

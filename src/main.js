@@ -496,10 +496,11 @@ Actor.main(async () => {
       process.env.PUPPETEER_EXECUTABLE_PATH,
       process.env.CHROME_EXECUTABLE_PATH,
       process.env.CHROME_PATH,
+      process.env.CHROME_BIN,
+      '/usr/bin/chromium-browser', // Alpine Linux
+      '/usr/bin/chromium',
       '/usr/bin/google-chrome-stable',
       '/usr/bin/google-chrome',
-      '/usr/bin/chromium',
-      '/usr/bin/chromium-browser',
     ].filter(Boolean);
     for (const p of candidates) {
       try { if (fs.existsSync(p)) return p; } catch {}
@@ -509,6 +510,13 @@ Actor.main(async () => {
     return undefined;
   };
   const executablePath = resolveSystemChrome();
+  
+  if (!executablePath) {
+    logger.warn('No Chrome/Chromium executable found. Puppeteer will try to download one.');
+  } else {
+    logger.info({ executablePath }, 'Using Chrome/Chromium executable');
+  }
+  
   const client = new Client({
     puppeteer: {
       headless: Boolean(input.headless),

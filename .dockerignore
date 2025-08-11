@@ -1,0 +1,51 @@
+# Git
+.git
+.gitignore
+
+# Development dependencies
+node_modules
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Testing
+coverage
+.jest-cache
+tests
+jest.config.js
+*.test.js
+
+# Development tools
+.eslintrc*
+.editorconfig
+.prettierrc*
+.husky
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+.DS_Store
+
+# Local runtime data
+apify_storage
+storage
+.apify
+.wwebjs_auth
+session_backup.*
+qr.png
+stats.json
+seen_ids.json
+
+# Documentation (keep README.md for Apify)
+# README.md
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Build artifacts
+dist
+build
