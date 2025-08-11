@@ -199,7 +199,6 @@
     "webhookHeaders": {
       "type": "object",
       "title": "Webhook headers",
-      "default": {},
       "description": "See README for details.",
       "editor": "json"
     },
@@ -257,12 +256,6 @@
         }
       },
       "additionalProperties": false,
-      "default": {
-        "enabled": false,
-        "algorithm": "sha256",
-        "secret": "",
-        "headerName": "X-Signature"
-      },
       "title": "Webhook ignature",
       "description": "See README for details.",
       "editor": "json"
@@ -379,11 +372,6 @@
         }
       },
       "additionalProperties": false,
-      "default": {
-        "maskPhoneNumbers": false,
-        "maskNames": false,
-        "strategy": "mask"
-      },
       "title": "Redact",
       "description": "See README for details.",
       "editor": "json"
@@ -497,9 +485,6 @@
         }
       },
       "additionalProperties": false,
-      "default": {
-        "enabled": false
-      },
       "title": "Human ode",
       "description": "See README for details.",
       "editor": "json"
@@ -569,9 +554,6 @@
         }
       },
       "additionalProperties": false,
-      "default": {
-        "enabled": true
-      },
       "title": "Stealth",
       "description": "See README for details.",
       "editor": "json"
@@ -593,9 +575,6 @@
         }
       },
       "additionalProperties": true,
-      "default": {
-        "enabled": false
-      },
       "title": "Fingerprint",
       "description": "See README for details.",
       "editor": "json"
@@ -609,9 +588,6 @@
           "description": "See README for details.",
           "editor": "checkbox"
         }
-      },
-      "default": {
-        "enabled": false
       },
       "title": "Ghost ursor",
       "description": "See README for details.",
@@ -681,9 +657,6 @@
         }
       },
       "additionalProperties": false,
-      "default": {
-        "enabled": false
-      },
       "title": "Kafka",
       "description": "See README for details.",
       "editor": "json"
@@ -741,9 +714,6 @@
         }
       },
       "additionalProperties": false,
-      "default": {
-        "enabled": false
-      },
       "title": "S3",
       "description": "See README for details.",
       "editor": "json"
@@ -757,9 +727,6 @@
           "description": "See README for details.",
           "editor": "checkbox"
         }
-      },
-      "default": {
-        "enabled": false
       },
       "title": "Nlp",
       "description": "See README for details.",
@@ -787,7 +754,6 @@
           "editor": "stringList"
         }
       },
-      "default": {},
       "title": "Compliance",
       "description": "See README for details.",
       "editor": "json"
@@ -826,9 +792,6 @@
           "editor": "checkbox"
         }
       },
-      "default": {
-        "enabled": false
-      },
       "title": "Coordinator",
       "description": "See README for details.",
       "editor": "json"
@@ -861,12 +824,6 @@
           "editor": "number"
         }
       },
-      "default": {
-        "backfillPerChat": 0,
-        "selectedOnly": true,
-        "afterUnix": 0,
-        "maxTotal": 0
-      },
       "title": "History",
       "description": "See README for details.",
       "editor": "json"
@@ -892,9 +849,6 @@
           "description": "See README for details.",
           "editor": "checkbox"
         }
-      },
-      "default": {
-        "enabled": false
       },
       "title": "Backfill",
       "description": "See README for details.",
@@ -926,7 +880,6 @@
           "editor": "stringList"
         }
       },
-      "default": {},
       "title": "Geo",
       "description": "See README for details.",
       "editor": "json"
@@ -964,11 +917,6 @@
         }
       },
       "additionalProperties": false,
-      "default": {
-        "focusSelectedChatsUI": false,
-        "cycleIntervalMs": 120000,
-        "cycleRandomJitterMs": 30000
-      },
       "title": "Read ode",
       "description": "See README for details.",
       "editor": "json"
