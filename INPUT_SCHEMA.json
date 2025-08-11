@@ -233,28 +233,24 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false,
           "title": "Enabled",
           "description": "See README for details.",
           "editor": "checkbox"
         },
         "algorithm": {
           "type": "string",
-          "default": "sha256",
           "title": "Algorithm",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "secret": {
           "type": "string",
-          "default": "",
           "title": "Secret",
           "description": "See README for details.",
           "editor": "textfield"
         },
         "headerName": {
           "type": "string",
-          "default": "X-Signature",
           "title": "Header ame",
           "description": "See README for details.",
           "editor": "textfield"
