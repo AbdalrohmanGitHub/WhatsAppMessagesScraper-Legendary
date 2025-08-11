@@ -6,27 +6,34 @@
     "headless": {
       "type": "boolean",
       "title": "Run headless",
-      "default": true
+      "default": true,
+      "description": "See README for details."
     },
     "sessionId": {
       "type": "string",
       "title": "Session ID",
-      "default": "default"
+      "default": "default",
+      "description": "See README for details."
     },
     "sessionDir": {
       "type": "string",
       "title": "Session directory",
-      "default": ".wwebjs_auth"
+      "default": ".wwebjs_auth",
+      "description": "See README for details."
     },
     "rateLimitPerSecond": {
       "type": "integer",
       "minimum": 1,
-      "default": 10
+      "default": 10,
+      "title": "Rate imit er econd",
+      "description": "See README for details."
     },
     "maxConcurrency": {
       "type": "integer",
       "minimum": 1,
-      "default": 2
+      "default": 2,
+      "title": "Max oncurrency",
+      "description": "See README for details."
     },
     "listenChats": {
       "type": "string",
@@ -35,74 +42,96 @@
         "groups",
         "private"
       ],
-      "default": "all"
+      "default": "all",
+      "title": "Listen hats",
+      "description": "See README for details."
     },
     "includeGroups": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Include roups",
+      "description": "See README for details."
     },
     "excludeGroups": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Exclude roups",
+      "description": "See README for details."
     },
     "includeContacts": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Include ontacts",
+      "description": "See README for details."
     },
     "excludeContacts": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Exclude ontacts",
+      "description": "See README for details."
     },
     "includeChatIds": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Include hat ds",
+      "description": "See README for details."
     },
     "excludeChatIds": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Exclude hat ds",
+      "description": "See README for details."
     },
     "includeMessageTypes": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Include essage ypes",
+      "description": "See README for details."
     },
     "includeTextPatterns": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Include ext atterns",
+      "description": "See README for details."
     },
     "excludeTextPatterns": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Exclude ext atterns",
+      "description": "See README for details."
     },
     "includeFromMe": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "title": "Include rom e",
+      "description": "See README for details."
     },
     "mediaHandling": {
       "type": "string",
@@ -112,59 +141,81 @@
         "kv-store",
         "s3"
       ],
-      "default": "skip"
+      "default": "skip",
+      "title": "Media andling",
+      "description": "See README for details."
     },
     "maxMediaSizeMB": {
       "type": "number",
-      "default": 25
+      "default": 25,
+      "title": "Max edia ize ",
+      "description": "See README for details."
     },
     "inlineQuotedMessage": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "title": "Inline uoted essage",
+      "description": "See README for details."
     },
     "webhookUrl": {
       "type": "string",
       "title": "Webhook URL",
-      "default": ""
+      "default": "",
+      "description": "See README for details."
     },
     "webhookHeaders": {
       "type": "object",
       "title": "Webhook headers",
-      "default": {}
+      "default": {},
+      "description": "See README for details."
     },
     "webhooks": {
       "type": "array",
       "items": {
         "type": "object"
       },
-      "default": []
+      "default": [],
+      "title": "Webhooks",
+      "description": "See README for details."
     },
     "webhookMaxRetries": {
       "type": "integer",
-      "default": 3
+      "default": 3,
+      "title": "Webhook ax etries",
+      "description": "See README for details."
     },
     "webhookBaseBackoffMs": {
       "type": "integer",
-      "default": 1000
+      "default": 1000,
+      "title": "Webhook ase ackoff s",
+      "description": "See README for details."
     },
     "webhookSignature": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Enabled",
+          "description": "See README for details."
         },
         "algorithm": {
           "type": "string",
-          "default": "sha256"
+          "default": "sha256",
+          "title": "Algorithm",
+          "description": "See README for details."
         },
         "secret": {
           "type": "string",
-          "default": ""
+          "default": "",
+          "title": "Secret",
+          "description": "See README for details."
         },
         "headerName": {
           "type": "string",
-          "default": "X-Signature"
+          "default": "X-Signature",
+          "title": "Header ame",
+          "description": "See README for details."
         }
       },
       "additionalProperties": false,
@@ -173,7 +224,9 @@
         "algorithm": "sha256",
         "secret": "",
         "headerName": "X-Signature"
-      }
+      },
+      "title": "Webhook ignature",
+      "description": "See README for details."
     },
     "outputMode": {
       "type": "string",
@@ -181,7 +234,9 @@
         "rich",
         "extremescrapes"
       ],
-      "default": "rich"
+      "default": "rich",
+      "title": "Output ode",
+      "description": "See README for details."
     },
     "webhookPayloadMode": {
       "type": "string",
@@ -190,46 +245,66 @@
         "rich",
         "extremescrapes"
       ],
-      "default": "match"
+      "default": "match",
+      "title": "Webhook ayload ode",
+      "description": "See README for details."
     },
     "includeReactions": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "title": "Include eactions",
+      "description": "See README for details."
     },
     "includeRevocations": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "title": "Include evocations",
+      "description": "See README for details."
     },
     "includeAcks": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Include cks",
+      "description": "See README for details."
     },
     "includeGroupEvents": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Include roup vents",
+      "description": "See README for details."
     },
     "includeEdits": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Include dits",
+      "description": "See README for details."
     },
     "includeRevocationsMe": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Include evocations e",
+      "description": "See README for details."
     },
     "includeProfilePicUrl": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Include rofile ic rl",
+      "description": "See README for details."
     },
     "redact": {
       "type": "object",
       "properties": {
         "maskPhoneNumbers": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Mask hone umbers",
+          "description": "See README for details."
         },
         "maskNames": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Mask ames",
+          "description": "See README for details."
         },
         "strategy": {
           "type": "string",
@@ -237,7 +312,9 @@
             "mask",
             "hash"
           ],
-          "default": "mask"
+          "default": "mask",
+          "title": "Strategy",
+          "description": "See README for details."
         }
       },
       "additionalProperties": false,
@@ -245,35 +322,51 @@
         "maskPhoneNumbers": false,
         "maskNames": false,
         "strategy": "mask"
-      }
+      },
+      "title": "Redact",
+      "description": "See README for details."
     },
     "datasetName": {
       "type": "string",
-      "default": ""
+      "default": "",
+      "title": "Dataset ame",
+      "description": "See README for details."
     },
     "storeQrToKv": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "title": "Store r o v",
+      "description": "See README for details."
     },
     "qrMaxRetries": {
       "type": "integer",
-      "default": 24
+      "default": 24,
+      "title": "Qr ax etries",
+      "description": "See README for details."
     },
     "authTimeoutMs": {
       "type": "integer",
-      "default": 120000
+      "default": 120000,
+      "title": "Auth imeout s",
+      "description": "See README for details."
     },
     "persistDedup": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Persist edup",
+      "description": "See README for details."
     },
     "dedupMaxIds": {
       "type": "integer",
-      "default": 10000
+      "default": 10000,
+      "title": "Dedup ax ds",
+      "description": "See README for details."
     },
     "dedupFlushSecs": {
       "type": "integer",
-      "default": 30
+      "default": 30,
+      "title": "Dedup lush ecs",
+      "description": "See README for details."
     },
     "targetMode": {
       "type": "string",
@@ -281,104 +374,142 @@
         "all",
         "selected"
       ],
-      "default": "all"
+      "default": "all",
+      "title": "Target ode",
+      "description": "See README for details."
     },
     "selectedChats": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Selected hats",
+      "description": "See README for details."
     },
     "humanMode": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Enabled",
+          "description": "See README for details."
         },
         "minIntervalMs": {
           "type": "integer",
-          "default": 45000
+          "default": 45000,
+          "title": "Min nterval s",
+          "description": "See README for details."
         },
         "maxIntervalMs": {
           "type": "integer",
-          "default": 180000
+          "default": 180000,
+          "title": "Max nterval s",
+          "description": "See README for details."
         },
         "scrollPixelsMin": {
           "type": "integer",
-          "default": 200
+          "default": 200,
+          "title": "Scroll ixels in",
+          "description": "See README for details."
         },
         "scrollPixelsMax": {
           "type": "integer",
-          "default": 1200
+          "default": 1200,
+          "title": "Scroll ixels ax",
+          "description": "See README for details."
         }
       },
       "additionalProperties": false,
       "default": {
         "enabled": false
-      }
+      },
+      "title": "Human ode",
+      "description": "See README for details."
     },
     "stealth": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": true
+          "default": true,
+          "title": "Enabled",
+          "description": "See README for details."
         },
         "emulateTimezone": {
           "type": "string",
-          "default": ""
+          "default": "",
+          "title": "Emulate imezone",
+          "description": "See README for details."
         },
         "languages": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": []
+          "default": [],
+          "title": "Languages",
+          "description": "See README for details."
         },
         "platform": {
           "type": "string",
-          "default": ""
+          "default": "",
+          "title": "Platform",
+          "description": "See README for details."
         },
         "userAgent": {
           "type": "string",
-          "default": ""
+          "default": "",
+          "title": "User gent",
+          "description": "See README for details."
         },
         "viewport": {
           "type": "object",
           "properties": {
             "width": {
               "type": "integer",
-              "default": 0
+              "default": 0,
+              "title": "Width",
+              "description": "See README for details."
             },
             "height": {
               "type": "integer",
-              "default": 0
+              "default": 0,
+              "title": "Height",
+              "description": "See README for details."
             }
           },
           "additionalProperties": false,
           "default": {
             "width": 0,
             "height": 0
-          }
+          },
+          "title": "Viewport",
+          "description": "See README for details."
         },
         "hardwareConcurrency": {
           "type": "integer",
-          "default": 0
+          "default": 0,
+          "title": "Hardware oncurrency",
+          "description": "See README for details."
         }
       },
       "additionalProperties": false,
       "default": {
         "enabled": true
-      }
+      },
+      "title": "Stealth",
+      "description": "See README for details."
     },
     "fingerprint": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Enabled",
+          "description": "See README for details."
         },
         "options": {
           "type": "object",
@@ -389,128 +520,178 @@
             "devices": [
               "desktop"
             ]
-          }
+          },
+          "title": "Options",
+          "description": "See README for details."
         }
       },
       "additionalProperties": true,
       "default": {
         "enabled": false
-      }
+      },
+      "title": "Fingerprint",
+      "description": "See README for details."
     },
     "ghostCursor": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Enabled",
+          "description": "See README for details."
         }
       },
       "default": {
         "enabled": false
-      }
+      },
+      "title": "Ghost ursor",
+      "description": "See README for details."
     },
     "kafka": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Enabled",
+          "description": "See README for details."
         },
         "brokers": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": []
+          "default": [],
+          "title": "Brokers",
+          "description": "See README for details."
         },
         "clientId": {
           "type": "string",
-          "default": "wa-scraper"
+          "default": "wa-scraper",
+          "title": "Client d",
+          "description": "See README for details."
         },
         "topic": {
           "type": "string",
-          "default": "whatsapp-messages"
+          "default": "whatsapp-messages",
+          "title": "Topic",
+          "description": "See README for details."
         },
         "ssl": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Ssl",
+          "description": "See README for details."
         },
         "sasl": {
           "type": "object",
           "properties": {
             "mechanism": {
               "type": "string",
-              "default": ""
+              "default": "",
+              "title": "Mechanism",
+              "description": "See README for details."
             },
             "username": {
               "type": "string",
-              "default": ""
+              "default": "",
+              "title": "Username",
+              "description": "See README for details."
             },
             "password": {
               "type": "string",
-              "default": ""
+              "default": "",
+              "title": "Password",
+              "description": "See README for details."
             }
           },
-          "default": {}
+          "default": {},
+          "title": "Sasl",
+          "description": "See README for details."
         }
       },
       "additionalProperties": false,
       "default": {
         "enabled": false
-      }
+      },
+      "title": "Kafka",
+      "description": "See README for details."
     },
     "s3": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Enabled",
+          "description": "See README for details."
         },
         "bucket": {
           "type": "string",
-          "default": ""
+          "default": "",
+          "title": "Bucket",
+          "description": "See README for details."
         },
         "prefix": {
           "type": "string",
-          "default": "whatsapp/"
+          "default": "whatsapp/",
+          "title": "Prefix",
+          "description": "See README for details."
         },
         "region": {
           "type": "string",
-          "default": "us-east-1"
+          "default": "us-east-1",
+          "title": "Region",
+          "description": "See README for details."
         },
         "acl": {
           "type": "string",
-          "default": "private"
+          "default": "private",
+          "title": "Acl",
+          "description": "See README for details."
         },
         "sse": {
           "type": "string",
-          "default": "AES256"
+          "default": "AES256",
+          "title": "Sse",
+          "description": "See README for details."
         },
         "batchFlushMessages": {
           "type": "integer",
-          "default": 500
+          "default": 500,
+          "title": "Batch lush essages",
+          "description": "See README for details."
         },
         "batchFlushMs": {
           "type": "integer",
-          "default": 30000
+          "default": 30000,
+          "title": "Batch lush s",
+          "description": "See README for details."
         }
       },
       "additionalProperties": false,
       "default": {
         "enabled": false
-      }
+      },
+      "title": "S3",
+      "description": "See README for details."
     },
     "nlp": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Enabled",
+          "description": "See README for details."
         }
       },
       "default": {
         "enabled": false
-      }
+      },
+      "title": "Nlp",
+      "description": "See README for details."
     },
     "compliance": {
       "type": "object",
@@ -520,64 +701,90 @@
           "items": {
             "type": "string"
           },
-          "default": []
+          "default": [],
+          "title": "Deny umbers",
+          "description": "See README for details."
         },
         "denyIds": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": []
+          "default": [],
+          "title": "Deny ds",
+          "description": "See README for details."
         }
       },
-      "default": {}
+      "default": {},
+      "title": "Compliance",
+      "description": "See README for details."
     },
     "coordinator": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Enabled",
+          "description": "See README for details."
         },
         "lockKey": {
           "type": "string",
-          "default": "instance_lock"
+          "default": "instance_lock",
+          "title": "Lock ey",
+          "description": "See README for details."
         },
         "lockTtlSecs": {
           "type": "integer",
-          "default": 60
+          "default": 60,
+          "title": "Lock tl ecs",
+          "description": "See README for details."
         },
         "renewSecs": {
           "type": "integer",
-          "default": 30
+          "default": 30,
+          "title": "Renew ecs",
+          "description": "See README for details."
         },
         "exitIfNoLock": {
           "type": "boolean",
-          "default": true
+          "default": true,
+          "title": "Exit f o ock",
+          "description": "See README for details."
         }
       },
       "default": {
         "enabled": false
-      }
+      },
+      "title": "Coordinator",
+      "description": "See README for details."
     },
     "history": {
       "type": "object",
       "properties": {
         "backfillPerChat": {
           "type": "integer",
-          "default": 0
+          "default": 0,
+          "title": "Backfill er hat",
+          "description": "See README for details."
         },
         "selectedOnly": {
           "type": "boolean",
-          "default": true
+          "default": true,
+          "title": "Selected nly",
+          "description": "See README for details."
         },
         "afterUnix": {
           "type": "integer",
-          "default": 0
+          "default": 0,
+          "title": "After nix",
+          "description": "See README for details."
         },
         "maxTotal": {
           "type": "integer",
-          "default": 0
+          "default": 0,
+          "title": "Max otal",
+          "description": "See README for details."
         }
       },
       "default": {
@@ -585,70 +792,96 @@
         "selectedOnly": true,
         "afterUnix": 0,
         "maxTotal": 0
-      }
+      },
+      "title": "History",
+      "description": "See README for details."
     },
     "backfill": {
       "type": "object",
       "properties": {
         "enabled": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Enabled",
+          "description": "See README for details."
         },
         "perChatCount": {
           "type": "integer",
-          "default": 0
+          "default": 0,
+          "title": "Per hat ount",
+          "description": "See README for details."
         },
         "onlySelected": {
           "type": "boolean",
-          "default": true
+          "default": true,
+          "title": "Only elected",
+          "description": "See README for details."
         }
       },
       "default": {
         "enabled": false
-      }
+      },
+      "title": "Backfill",
+      "description": "See README for details."
     },
     "proxyUrl": {
       "type": "string",
-      "default": ""
+      "default": "",
+      "title": "Proxy rl",
+      "description": "See README for details."
     },
     "geo": {
       "type": "object",
       "properties": {
         "timezone": {
           "type": "string",
-          "default": ""
+          "default": "",
+          "title": "Timezone",
+          "description": "See README for details."
         },
         "languages": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "default": []
+          "default": [],
+          "title": "Languages",
+          "description": "See README for details."
         }
       },
-      "default": {}
+      "default": {},
+      "title": "Geo",
+      "description": "See README for details."
     },
     "extraPuppeteerArgs": {
       "type": "array",
       "items": {
         "type": "string"
       },
-      "default": []
+      "default": [],
+      "title": "Extra uppeteer rgs",
+      "description": "See README for details."
     },
     "readMode": {
       "type": "object",
       "properties": {
         "focusSelectedChatsUI": {
           "type": "boolean",
-          "default": false
+          "default": false,
+          "title": "Focus elected hats ",
+          "description": "See README for details."
         },
         "cycleIntervalMs": {
           "type": "integer",
-          "default": 120000
+          "default": 120000,
+          "title": "Cycle nterval s",
+          "description": "See README for details."
         },
         "cycleRandomJitterMs": {
           "type": "integer",
-          "default": 30000
+          "default": 30000,
+          "title": "Cycle andom itter s",
+          "description": "See README for details."
         }
       },
       "additionalProperties": false,
@@ -656,59 +889,87 @@
         "focusSelectedChatsUI": false,
         "cycleIntervalMs": 120000,
         "cycleRandomJitterMs": 30000
-      }
+      },
+      "title": "Read ode",
+      "description": "See README for details."
     },
     "exportChatsOnce": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Export hats nce",
+      "description": "See README for details."
     },
     "exportChatsAndExit": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Export hats nd xit",
+      "description": "See README for details."
     },
     "restoreSessionFromKv": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Restore ession rom v",
+      "description": "See README for details."
     },
     "persistSessionToKv": {
       "type": "boolean",
-      "default": false
+      "default": false,
+      "title": "Persist ession o v",
+      "description": "See README for details."
     },
     "compressSessionBackup": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "title": "Compress ession ackup",
+      "description": "See README for details."
     },
     "maxQueuedJobs": {
       "type": "integer",
-      "default": 1000
+      "default": 1000,
+      "title": "Max ueued obs",
+      "description": "See README for details."
     },
     "maxRssMB": {
       "type": "integer",
-      "default": 0
+      "default": 0,
+      "title": "Max ss ",
+      "description": "See README for details."
     },
     "maxHeapMB": {
       "type": "integer",
-      "default": 0
+      "default": 0,
+      "title": "Max eap ",
+      "description": "See README for details."
     },
     "maxMessages": {
       "type": "integer",
-      "default": 0
+      "default": 0,
+      "title": "Max essages",
+      "description": "See README for details."
     },
     "controlPollingSecs": {
       "type": "integer",
-      "default": 10
+      "default": 10,
+      "title": "Control olling ecs",
+      "description": "See README for details."
     },
     "statsFlushSecs": {
       "type": "integer",
-      "default": 30
+      "default": 30,
+      "title": "Stats lush ecs",
+      "description": "See README for details."
     },
     "watchdogStaleMs": {
       "type": "integer",
-      "default": 600000
+      "default": 600000,
+      "title": "Watchdog tale s",
+      "description": "See README for details."
     },
     "shutdownAfterMinutes": {
       "type": "integer",
-      "default": 0
+      "default": 0,
+      "title": "Shutdown fter inutes",
+      "description": "See README for details."
     }
   },
   "required": []
