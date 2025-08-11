@@ -521,6 +521,8 @@ Actor.main(async () => {
     puppeteer: {
       headless: Boolean(input.headless),
       executablePath: executablePath || undefined,
+      defaultViewport: { width: 1366, height: 768 },
+      ignoreDefaultArgs: ['--enable-automation'],
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
@@ -530,10 +532,18 @@ Actor.main(async () => {
         '--no-first-run',
         '--disable-web-security',
         '--disable-blink-features=AutomationControlled',
+        '--lang=en-US,en;q=0.9',
+        '--password-store=basic',
+        `--user-agent=${process.env.CHROME_UA || 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'}`,
         ...(input.proxyUrl ? [`--proxy-server=${input.proxyUrl}`] : []),
         ...(Array.isArray(input.extraPuppeteerArgs) ? input.extraPuppeteerArgs : []),
       ],
     },
+    webVersionCache: {
+      type: 'none',
+    },
+    authTimeoutMs: 120000,
+    qrMaxRetries: 24,
     authStrategy: new LocalAuth({ dataPath: sessionDir, clientId: input.sessionId || DEFAULTS.sessionId }),
     qrMaxRetries: 12,
     takeoverOnConflict: true,
@@ -616,6 +626,8 @@ Actor.main(async () => {
     try {
       // ASCII QR for terminals
       qrcodeTerminal.generate(qr, { small: true });
+      // Also store plain text QR for apps that parse it directly
+      await Actor.setValue('qr.txt', qr, { contentType: 'text/plain; charset=utf-8' }).catch(() => {});
       // Data URL for visual references in rich logs (if needed)
       const dataUrl = await QRCode.toDataURL(qr);
       logger.debug({ qrDataUrl: dataUrl.slice(0, 64) + '...' }, 'QR DataURL preview');
@@ -634,6 +646,9 @@ Actor.main(async () => {
   });
 
   client.on('authenticated', () => logger.info('Authenticated'));
+  client.on('auth_failure', (msg) => {
+    logger.error({ msg }, 'Authentication failed');
+  });
   let pageRef = null;
   let lastEventAt = Date.now();
 

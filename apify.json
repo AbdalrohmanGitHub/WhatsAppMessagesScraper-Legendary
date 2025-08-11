@@ -65,7 +65,9 @@
         "default": { "maskPhoneNumbers": false, "maskNames": false, "strategy": "mask" }
       },
       "datasetName": { "type": "string", "default": "" },
-      "storeQrToKv": { "type": "boolean", "default": false },
+      "storeQrToKv": { "type": "boolean", "default": true },
+      "qrMaxRetries": { "type": "integer", "default": 24 },
+      "authTimeoutMs": { "type": "integer", "default": 120000 },
       "persistDedup": { "type": "boolean", "default": false },
       "dedupMaxIds": { "type": "integer", "default": 10000 },
       "dedupFlushSecs": { "type": "integer", "default": 30 },
