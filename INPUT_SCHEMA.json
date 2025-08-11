@@ -50,106 +50,97 @@
       "default": "all",
       "title": "Listen hats",
       "description": "See README for details.",
-      "editor": "textfield"
+      "editor": "select"
     },
     "includeGroups": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Include roups",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "excludeGroups": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Exclude roups",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "includeContacts": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Include ontacts",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "excludeContacts": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Exclude ontacts",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "includeChatIds": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Include hat ds",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "excludeChatIds": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Exclude hat ds",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "includeMessageTypes": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Include essage ypes",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "includeTextPatterns": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Include ext atterns",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "excludeTextPatterns": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Exclude ext atterns",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "includeFromMe": {
       "type": "boolean",
@@ -169,7 +160,7 @@
       "default": "skip",
       "title": "Media andling",
       "description": "See README for details.",
-      "editor": "textfield"
+      "editor": "select"
     },
     "maxMediaSizeMB": {
       "type": "number",
@@ -202,8 +193,7 @@
     "webhooks": {
       "type": "array",
       "items": {
-        "type": "object",
-        "editor": "json"
+        "type": "object"
       },
       "default": [],
       "title": "Webhooks",
@@ -276,7 +266,7 @@
       "default": "rich",
       "title": "Output ode",
       "description": "See README for details.",
-      "editor": "textfield"
+      "editor": "select"
     },
     "webhookPayloadMode": {
       "type": "string",
@@ -288,7 +278,7 @@
       "default": "match",
       "title": "Webhook ayload ode",
       "description": "See README for details.",
-      "editor": "textfield"
+      "editor": "select"
     },
     "includeReactions": {
       "type": "boolean",
@@ -365,7 +355,7 @@
           "default": "mask",
           "title": "Strategy",
           "description": "See README for details.",
-          "editor": "textfield"
+          "editor": "select"
         }
       },
       "additionalProperties": false,
@@ -436,18 +426,17 @@
       "default": "all",
       "title": "Target ode",
       "description": "See README for details.",
-      "editor": "textfield"
+      "editor": "select"
     },
     "selectedChats": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Selected hats",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "humanMode": {
       "type": "object",
@@ -516,13 +505,12 @@
         "languages": {
           "type": "array",
           "items": {
-            "type": "string",
-            "editor": "textfield"
+            "type": "string"
           },
           "default": [],
           "title": "Languages",
           "description": "See README for details.",
-          "editor": "json"
+          "editor": "stringList"
         },
         "platform": {
           "type": "string",
@@ -645,13 +633,12 @@
         "brokers": {
           "type": "array",
           "items": {
-            "type": "string",
-            "editor": "textfield"
+            "type": "string"
           },
           "default": [],
           "title": "Brokers",
           "description": "See README for details.",
-          "editor": "json"
+          "editor": "stringList"
         },
         "clientId": {
           "type": "string",
@@ -805,24 +792,22 @@
         "denyNumbers": {
           "type": "array",
           "items": {
-            "type": "string",
-            "editor": "textfield"
+            "type": "string"
           },
           "default": [],
           "title": "Deny umbers",
           "description": "See README for details.",
-          "editor": "json"
+          "editor": "stringList"
         },
         "denyIds": {
           "type": "array",
           "items": {
-            "type": "string",
-            "editor": "textfield"
+            "type": "string"
           },
           "default": [],
           "title": "Deny ds",
           "description": "See README for details.",
-          "editor": "json"
+          "editor": "stringList"
         }
       },
       "default": {},
@@ -970,13 +955,12 @@
         "languages": {
           "type": "array",
           "items": {
-            "type": "string",
-            "editor": "textfield"
+            "type": "string"
           },
           "default": [],
           "title": "Languages",
           "description": "See README for details.",
-          "editor": "json"
+          "editor": "stringList"
         }
       },
       "default": {},
@@ -987,13 +971,12 @@
     "extraPuppeteerArgs": {
       "type": "array",
       "items": {
-        "type": "string",
-        "editor": "textfield"
+        "type": "string"
       },
       "default": [],
       "title": "Extra uppeteer rgs",
       "description": "See README for details.",
-      "editor": "json"
+      "editor": "stringList"
     },
     "readMode": {
       "type": "object",
