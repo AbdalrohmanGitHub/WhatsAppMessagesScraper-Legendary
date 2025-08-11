@@ -67,7 +67,7 @@
       "default": [],
       "title": "Include roups",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "excludeGroups": {
       "type": "array",
@@ -79,7 +79,7 @@
       "default": [],
       "title": "Exclude roups",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "includeContacts": {
       "type": "array",
@@ -91,7 +91,7 @@
       "default": [],
       "title": "Include ontacts",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "excludeContacts": {
       "type": "array",
@@ -103,7 +103,7 @@
       "default": [],
       "title": "Exclude ontacts",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "includeChatIds": {
       "type": "array",
@@ -115,7 +115,7 @@
       "default": [],
       "title": "Include hat ds",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "excludeChatIds": {
       "type": "array",
@@ -127,7 +127,7 @@
       "default": [],
       "title": "Exclude hat ds",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "includeMessageTypes": {
       "type": "array",
@@ -139,7 +139,7 @@
       "default": [],
       "title": "Include essage ypes",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "includeTextPatterns": {
       "type": "array",
@@ -151,7 +151,7 @@
       "default": [],
       "title": "Include ext atterns",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "excludeTextPatterns": {
       "type": "array",
@@ -163,7 +163,7 @@
       "default": [],
       "title": "Exclude ext atterns",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "includeFromMe": {
       "type": "boolean",
@@ -229,7 +229,7 @@
       "default": [],
       "title": "Webhooks",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "webhookMaxRetries": {
       "type": "integer",
@@ -486,7 +486,7 @@
       "default": [],
       "title": "Selected hats",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "humanMode": {
       "type": "object",
@@ -562,7 +562,7 @@
           "default": [],
           "title": "Languages",
           "description": "See README for details.",
-          "editor": "select"
+          "editor": "stringList"
         },
         "platform": {
           "type": "string",
@@ -692,7 +692,7 @@
           "default": [],
           "title": "Brokers",
           "description": "See README for details.",
-          "editor": "select"
+          "editor": "stringList"
         },
         "clientId": {
           "type": "string",
@@ -853,7 +853,7 @@
           "default": [],
           "title": "Deny umbers",
           "description": "See README for details.",
-          "editor": "select"
+          "editor": "stringList"
         },
         "denyIds": {
           "type": "array",
@@ -865,7 +865,7 @@
           "default": [],
           "title": "Deny ds",
           "description": "See README for details.",
-          "editor": "select"
+          "editor": "stringList"
         }
       },
       "default": {},
@@ -1020,7 +1020,7 @@
           "default": [],
           "title": "Languages",
           "description": "See README for details.",
-          "editor": "select"
+          "editor": "stringList"
         }
       },
       "default": {},
@@ -1038,7 +1038,7 @@
       "default": [],
       "title": "Extra uppeteer rgs",
       "description": "See README for details.",
-      "editor": "select"
+      "editor": "stringList"
     },
     "readMode": {
       "type": "object",
