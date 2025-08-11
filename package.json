@@ -1,0 +1,44 @@
+{
+  "name": "whatsapp-messages-scraper-clone",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Real-time WhatsApp Web messages scraper (clone of extremescrapes/whatsapp-messages-scraper) for monitoring new messages in groups and private chats.",
+  "main": "src/main.js",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "LOG_LEVEL=debug node src/main.js",
+    "apify:run": "node src/main.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand",
+    "test:watch": "NODE_OPTIONS=--experimental-vm-modules jest --watch",
+    "lint": "eslint .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.679.0",
+    "apify": "^3.1.8",
+    "bottleneck": "^2.19.5",
+    "dotenv": "^16.4.5",
+    "fingerprint-generator": "^2.1.48",
+    "fingerprint-injector": "^2.1.48",
+    "ghost-cursor": "^1.3.0",
+    "kafkajs": "^2.2.4",
+    "pino": "^9.3.2",
+    "puppeteer": "^23.7.1",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.25.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "husky": "^9.1.7",
+    "jest": "^30.0.5"
+  }
+}

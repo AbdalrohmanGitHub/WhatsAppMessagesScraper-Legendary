@@ -1,0 +1,208 @@
+{
+  "name": "whatsapp-messages-scraper-clone",
+  "version": "0.1",
+  "buildTag": "latest",
+  "env": null,
+  "dockerfile": null,
+  "actorSpecification": 1,
+  "input": {
+    "title": "WhatsApp Messages Scraper Clone Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+      "headless": { "type": "boolean", "title": "Run headless", "default": true },
+      "sessionId": { "type": "string", "title": "Session ID", "default": "default" },
+      "sessionDir": { "type": "string", "title": "Session directory", "default": ".wwebjs_auth" },
+      "rateLimitPerSecond": { "type": "integer", "minimum": 1, "default": 10 },
+      "maxConcurrency": { "type": "integer", "minimum": 1, "default": 2 },
+      "listenChats": { "type": "string", "enum": ["all", "groups", "private"], "default": "all" },
+      "includeGroups": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "excludeGroups": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "includeContacts": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "excludeContacts": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "includeChatIds": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "excludeChatIds": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "includeMessageTypes": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "includeTextPatterns": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "excludeTextPatterns": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "includeFromMe": { "type": "boolean", "default": true },
+      "mediaHandling": { "type": "string", "enum": ["skip", "base64", "kv-store", "s3"], "default": "skip" },
+      "maxMediaSizeMB": { "type": "number", "default": 25 },
+      "inlineQuotedMessage": { "type": "boolean", "default": true },
+      "webhookUrl": { "type": "string", "title": "Webhook URL", "default": "" },
+      "webhookHeaders": { "type": "object", "title": "Webhook headers", "default": {} },
+      "webhooks": { "type": "array", "items": { "type": "object" }, "default": [] },
+      "webhookMaxRetries": { "type": "integer", "default": 3 },
+      "webhookBaseBackoffMs": { "type": "integer", "default": 1000 },
+      "webhookSignature": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": false },
+          "algorithm": { "type": "string", "default": "sha256" },
+          "secret": { "type": "string", "default": "" },
+          "headerName": { "type": "string", "default": "X-Signature" }
+        },
+        "additionalProperties": false,
+        "default": { "enabled": false, "algorithm": "sha256", "secret": "", "headerName": "X-Signature" }
+      },
+      "outputMode": { "type": "string", "enum": ["rich", "extremescrapes"], "default": "rich" },
+      "webhookPayloadMode": { "type": "string", "enum": ["match", "rich", "extremescrapes"], "default": "match" },
+      "includeReactions": { "type": "boolean", "default": true },
+      "includeRevocations": { "type": "boolean", "default": true },
+      "includeAcks": { "type": "boolean", "default": false },
+      "includeGroupEvents": { "type": "boolean", "default": false },
+      "includeEdits": { "type": "boolean", "default": false },
+      "includeRevocationsMe": { "type": "boolean", "default": false },
+      "includeProfilePicUrl": { "type": "boolean", "default": false },
+      "redact": {
+        "type": "object",
+        "properties": {
+          "maskPhoneNumbers": { "type": "boolean", "default": false },
+          "maskNames": { "type": "boolean", "default": false },
+          "strategy": { "type": "string", "enum": ["mask", "hash"], "default": "mask" }
+        },
+        "additionalProperties": false,
+        "default": { "maskPhoneNumbers": false, "maskNames": false, "strategy": "mask" }
+      },
+      "datasetName": { "type": "string", "default": "" },
+      "storeQrToKv": { "type": "boolean", "default": false },
+      "persistDedup": { "type": "boolean", "default": false },
+      "dedupMaxIds": { "type": "integer", "default": 10000 },
+      "dedupFlushSecs": { "type": "integer", "default": 30 },
+      "targetMode": { "type": "string", "enum": ["all", "selected"], "default": "all" },
+      "selectedChats": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "humanMode": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": false },
+          "minIntervalMs": { "type": "integer", "default": 45000 },
+          "maxIntervalMs": { "type": "integer", "default": 180000 },
+          "scrollPixelsMin": { "type": "integer", "default": 200 },
+          "scrollPixelsMax": { "type": "integer", "default": 1200 }
+        },
+        "additionalProperties": false,
+        "default": { "enabled": false }
+      },
+      "stealth": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": true },
+          "emulateTimezone": { "type": "string", "default": "" },
+          "languages": { "type": "array", "items": { "type": "string" }, "default": [] },
+          "platform": { "type": "string", "default": "" },
+          "userAgent": { "type": "string", "default": "" },
+          "viewport": {
+            "type": "object",
+            "properties": {
+              "width": { "type": "integer", "default": 0 },
+              "height": { "type": "integer", "default": 0 }
+            },
+            "additionalProperties": false,
+            "default": { "width": 0, "height": 0 }
+          },
+          "hardwareConcurrency": { "type": "integer", "default": 0 }
+        },
+        "additionalProperties": false,
+        "default": { "enabled": true }
+      },
+      "fingerprint": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": false },
+          "options": { "type": "object", "default": { "browsers": ["chrome"], "devices": ["desktop"] } }
+        },
+        "additionalProperties": true,
+        "default": { "enabled": false }
+      },
+      "ghostCursor": { "type": "object", "properties": { "enabled": { "type": "boolean", "default": false } }, "default": { "enabled": false } },
+      "kafka": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": false },
+          "brokers": { "type": "array", "items": { "type": "string" }, "default": [] },
+          "clientId": { "type": "string", "default": "wa-scraper" },
+          "topic": { "type": "string", "default": "whatsapp-messages" },
+          "ssl": { "type": "boolean", "default": false },
+          "sasl": { "type": "object", "properties": { "mechanism": { "type": "string", "default": "" }, "username": { "type": "string", "default": "" }, "password": { "type": "string", "default": "" } }, "default": {} }
+        },
+        "additionalProperties": false,
+        "default": { "enabled": false }
+      },
+      "s3": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": false },
+          "bucket": { "type": "string", "default": "" },
+          "prefix": { "type": "string", "default": "whatsapp/" },
+          "region": { "type": "string", "default": "us-east-1" },
+          "acl": { "type": "string", "default": "private" },
+          "sse": { "type": "string", "default": "AES256" },
+          "batchFlushMessages": { "type": "integer", "default": 500 },
+          "batchFlushMs": { "type": "integer", "default": 30000 }
+        },
+        "additionalProperties": false,
+        "default": { "enabled": false }
+      },
+      "nlp": { "type": "object", "properties": { "enabled": { "type": "boolean", "default": false } }, "default": { "enabled": false } },
+      "compliance": { "type": "object", "properties": { "denyNumbers": { "type": "array", "items": { "type": "string" }, "default": [] }, "denyIds": { "type": "array", "items": { "type": "string" }, "default": [] } }, "default": {} },
+      "coordinator": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": false },
+          "lockKey": { "type": "string", "default": "instance_lock" },
+          "lockTtlSecs": { "type": "integer", "default": 60 },
+          "renewSecs": { "type": "integer", "default": 30 },
+          "exitIfNoLock": { "type": "boolean", "default": true }
+        },
+        "default": { "enabled": false }
+      },
+      "history": {
+        "type": "object",
+        "properties": {
+          "backfillPerChat": { "type": "integer", "default": 0 },
+          "selectedOnly": { "type": "boolean", "default": true },
+          "afterUnix": { "type": "integer", "default": 0 },
+          "maxTotal": { "type": "integer", "default": 0 }
+        },
+        "default": { "backfillPerChat": 0, "selectedOnly": true, "afterUnix": 0, "maxTotal": 0 }
+      },
+      "backfill": {
+        "type": "object",
+        "properties": {
+          "enabled": { "type": "boolean", "default": false },
+          "perChatCount": { "type": "integer", "default": 0 },
+          "onlySelected": { "type": "boolean", "default": true }
+        },
+        "default": { "enabled": false, "perChatCount": 0, "onlySelected": true }
+      },
+      "proxyUrl": { "type": "string", "default": "" },
+      "extraPuppeteerArgs": { "type": "array", "items": { "type": "string" }, "default": [] },
+      "readMode": {
+        "type": "object",
+        "properties": {
+          "focusSelectedChatsUI": { "type": "boolean", "default": false },
+          "cycleIntervalMs": { "type": "integer", "default": 120000 },
+          "cycleRandomJitterMs": { "type": "integer", "default": 30000 }
+        },
+        "additionalProperties": false,
+        "default": { "focusSelectedChatsUI": false, "cycleIntervalMs": 120000, "cycleRandomJitterMs": 30000 }
+      },
+      "exportChatsOnce": { "type": "boolean", "default": false },
+      "exportChatsAndExit": { "type": "boolean", "default": false },
+      "restoreSessionFromKv": { "type": "boolean", "default": false },
+      "persistSessionToKv": { "type": "boolean", "default": false },
+      "compressSessionBackup": { "type": "boolean", "default": true },
+      "maxQueuedJobs": { "type": "integer", "default": 1000 },
+      "maxRssMB": { "type": "integer", "default": 0 },
+      "maxHeapMB": { "type": "integer", "default": 0 },
+      "maxMessages": { "type": "integer", "default": 0 },
+      "backfill": { "type": "object", "properties": { "enabled": { "type": "boolean", "default": false }, "perChatCount": { "type": "integer", "default": 0 }, "onlySelected": { "type": "boolean", "default": true } }, "default": { "enabled": false } },
+      "controlPollingSecs": { "type": "integer", "default": 10 },
+      "statsFlushSecs": { "type": "integer", "default": 30 },
+      "watchdogStaleMs": { "type": "integer", "default": 600000 },
+      "shutdownAfterMinutes": { "type": "integer", "default": 0 }
+    },
+    "required": []
+  }
+}
+
