@@ -1122,6 +1122,5 @@
       "editor": "number"
     }
   },
-  "required": [],
-  "editor": "json"
+  "required": []
 }
